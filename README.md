@@ -17,7 +17,7 @@
 ---
 
 ## File Sources
-![Model File](model_testing.ipynb)
+[Model Development](model_testing.ipynb)
 
 ## **Project Introduction**
 

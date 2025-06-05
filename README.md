@@ -1,4 +1,5 @@
 # Readmission-Risk-Prediction
+ ![image.png](Readmission_cover.png)
  
 ## 📚 Table of Contents
 
@@ -16,8 +17,7 @@
 ---
 
 ## File Sources
-
-![image.png](Readmission_cover.png)
+![Model File](model_testing.ipynb)
 
 ## **Project Introduction**
 

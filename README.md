@@ -99,7 +99,7 @@ To prepare the data for analysis and modeling, I engineered a comprehensive **da
 
 ### Class Imbalance
 
-![image.png](attachment:fbc02acd-1827-4d5e-b2dc-3d7839f17c4d:image.png)
+![image.png](class_imbalance.png)
 
 - Analysis revealed ~30 % of encounters resulted in a 30-day readmission.
 - Exploratory Data Analysis revealed a significant imbalance between patients who were readmitted within 30 days and those who were not. This skew can mislead traditional metrics like accuracy, which may appear high simply by favoring the majority class.
@@ -107,7 +107,7 @@ To prepare the data for analysis and modeling, I engineered a comprehensive **da
 
 ### Outliers
 
-![outliers.png](attachment:6cdbb312-dcb7-4085-a9ba-d5d521d45e1d:outliers.png)
+![outliers.png](outliers.png)
 
 - Several columns contained outliers, which I identified using the Interquartile Range (IQR) method based on the 1st and 3rd quartiles. To handle these outliers, I imputed their values with the median, as it is more robust to skewed data. Although I planned to eventually use tree-based models—which are less sensitive to outliers—I began with simpler, more interpretable models like logistic regression and support vector machines that require scaled data free of outliers for optimal performance.
     
@@ -131,7 +131,7 @@ This allowed me to compare ensemble strategies and pick the most reliable approa
 
 ### Model Performance
 
-![Model Comparison graph.png](attachment:25b8a194-f500-460a-9cdc-29d7fceab449:Model_Comparison_graph.png)
+![Model Comparison graph.png](Model_Comparison_graph.png)
 
 - The stacking ensemble achieved the highest overall precision but missed more true readmissions (lower recall).
 - Tree-based models such as Histogram Gradient Boosting demonstrated superior recall for the positive class (readmissions), achieving approximately 84% recall, though with low precision (~38%), indicating a tendency to over-predict positives.
@@ -152,7 +152,7 @@ The Histogram-based Gradient Boosting (HGB) classifier was selected as the final
 
 ### Final Model Evaluation
 
-![Model Confusion Matrix.png](attachment:e4890c81-5b71-41c5-8d09-bd2ba6661ee3:Model_Confusion_Matrix.png)
+![Model Confusion Matrix.png](Model_Confusion_Matrix.png)
 
 This confusion matrix highlights the model’s cautious strategy: 
 

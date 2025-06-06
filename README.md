@@ -151,7 +151,7 @@ While the stacking classifier demonstrated strong precision, it achieved this at
 The Histogram-based Gradient Boosting (HGB) classifier was selected as the final model because it struck a better balance: it had the second-highest recall (important for identifying most patients at risk) and superior F1 score compared to the Decision Tree, indicating a more reliable overall prediction performance.
 
 ### Final Model Evaluation
-![Thresholds.png](Thresholds.png)
+![Thresholds.png](thresholds.png)
 
 -Adjusting the classification threshold from 0.43 to 0.53 revealed that increasing the threshold makes the model more conservative in predicting readmissions, slightly improving precision but reducing recall. So, I opted for a  lower probability threshold to improve recall. 
 ![Model Confusion Matrix.png](Model_Confusion_Matrix.png)

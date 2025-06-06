@@ -27,7 +27,7 @@
 
 **What I Built:**
 
-- A Histogram-based Gradient Boosting model trained on **55,000** Emergency Department visits from the MIMIC-IV dataset to predict 30-day readmissions. The model identified **84%** of readmission cases (recall = **0.84**) with a precision of **0.45** and a macro-F1 score of **0.58**.
+-A Histogram-based Gradient Boosting model trained on 55,000 Emergency Department visits from the MIMIC-IV dataset to predict 30-day readmissions. The model identified 74% of readmission cases (recall = 0.74) with a precision of 0.41 and a macro-F1 score of 0.61.
 
 **Impact:**
 
@@ -82,7 +82,7 @@ To prepare the data for analysis and modeling, I engineered a comprehensive **da
 ## Key Findings
 
 - The **Histogram-based Gradient Boosting (HGB) classifier** outperformed other models by achieving:
-    - **~84% recall** for readmitted cases—critical for minimizing missed high-risk patients.
+    - **74%** recall for readmitted cases—critical for minimizing missed high-risk patients. However, **~41%** precision for readmissions—leading to many false positives.
     - A more **balanced F1 score** than baseline models, making it practical for clinical use.
 - The **stacking ensemble model** achieved the highest precision but had lower recall, missing more true readmissions.
 - **Adjusting the classification threshold** demonstrated the trade-off between recall and precision, enabling model tuning based on clinical priorities.
@@ -152,6 +152,7 @@ The Histogram-based Gradient Boosting (HGB) classifier was selected as the final
 
 ### Final Model Evaluation
 
+-Adjusting the classification threshold from 0.43 to 0.53 revealed that increasing the threshold makes the model more conservative in predicting readmissions, slightly improving precision but reducing recall. So, I opted for a  lower probability threshold to improve recall. 
 ![Model Confusion Matrix.png](Model_Confusion_Matrix.png)
 
 This confusion matrix highlights the model’s cautious strategy: 
